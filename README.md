@@ -25,3 +25,12 @@ Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To u
 ## Further help
 
 To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
+
+<p>Leden toevoegen</p>
+<p>Groepen</p>
+<p>Emails versturen naar geselecteerde leden of groepen</p>
+<p>Agenda planning en mails</p>
+<p>Contributie en betalingen afhandelen / NTH mollie + automatische checklist</p>
+<p>Checklist betaald ja nee</p>
+<p>Checklist Aanwezig agenda afspraak ja nee</p>
+<p>Branding</p>
