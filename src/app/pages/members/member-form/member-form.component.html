@@ -1,0 +1,14 @@
+<div>
+    <label>Name:</label>
+    <input [(ngModel)]="member.name" required><br>
+    
+    <label>Birth Date:</label>
+    <input type="date" [(ngModel)]="member.birthDate" required><br>
+    
+    <label>Email:</label>
+    <input type="email" [(ngModel)]="member.email" required><br>
+    
+    <button (click)="onSave()">Save</button>
+    <button (click)="onCancel()">Cancel</button>
+  </div>
+  

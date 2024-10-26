@@ -1,0 +1,34 @@
+<h1>Members</h1>
+<table class="members-table">
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Birth Date</th>
+      <th>Email</th>
+      <th>Actions</th>
+    </tr>
+  </thead>
+  <tbody>
+    @for(member of members; track member){
+        <tr>
+          <td>{{ member.name }}</td>
+          <td>{{ member.birthDate }}</td>
+          <td>{{ member.email }}</td>
+          <td>
+            <button (click)="onEdit(member)">Edit</button>
+            <button (click)="onDelete(member.id)">Delete</button>
+          </td>
+        </tr>
+    }
+  </tbody>
+</table>
+<button (click)="onAdd()">Add Member</button>
+
+@if(selectedMember){
+    <app-member-form
+    [member]="selectedMember"
+    (save)="onSave($event)"
+    (cancel)="onCancel()">
+</app-member-form>
+}
+
