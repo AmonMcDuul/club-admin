@@ -1,9 +1,30 @@
 <div class="main-container">
     <div class="nav-container">
-        <app-navbar></app-navbar>
+        <app-navbar (screenChange)="onScreenChange($event)"></app-navbar>
     </div>
     <div class="content-container">
-        <p>Club admin</p>
-        <app-members></app-members>
+        @switch(activeScreen){
+            @case ("algemeen"){
+                <app-general></app-general>
+            }
+            @case ("leden"){
+                <app-members></app-members>
+            }
+            @case ("groepen"){
+                <app-groups></app-groups>
+            }
+            @case ("agenda"){
+                <app-calendar></app-calendar>
+            }
+            @case ("facturatie"){
+                <app-payment></app-payment>
+            }
+            @case ("email"){
+                <app-email></app-email>
+            }
+            @default {
+                <app-general></app-general>
+            }
+        }
     </div>
 </div>

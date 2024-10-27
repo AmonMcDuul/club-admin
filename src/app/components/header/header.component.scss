@@ -1,8 +1,10 @@
 .header-container{
     height: 60px;
-    background: rgb(1, 36, 32);
+    background: #0e2c3a;
     color: #FFF;
     display: flex;
-    justify-content: center;
+    // justify-content: center;
     align-items: center;
+    border-bottom: 2px solid #455a64;
+    padding-left: 10px;
 }

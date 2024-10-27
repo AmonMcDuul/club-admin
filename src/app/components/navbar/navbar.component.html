@@ -1,8 +1,10 @@
 <div class="navbar-container">
-    <p>Algemeen</p>
-    <p>Leden</p>
-    <p>Groepen</p>
-    <p>Agenda</p>
-    <p>Contributie/Facturen</p>
-    <p>Email versturen</p>
+    <div class="menu-items">
+        <div class="navbar-item" (click)="changeScreen('algemeen')">Algemeen</div>
+        <div class="navbar-item" (click)="changeScreen('leden')">Leden</div>
+        <div class="navbar-item" (click)="changeScreen('groepen')">Groepen</div>
+        <div class="navbar-item" (click)="changeScreen('agenda')">Agenda</div>
+        <div class="navbar-item" (click)="changeScreen('facturatie')">Facturatie</div>
+        <div class="navbar-item" (click)="changeScreen('email')">Email versturen</div>
+    </div>
 </div>

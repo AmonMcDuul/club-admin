@@ -7,7 +7,9 @@ import { Member } from '../models/members.model';
 })
 export class MemberService {
   private members: Member[] = [
-    { id: 1, name: 'Piet Pietersen', birthDate: '1999-11-11', email: 'piet@email.com' }
+    { id: 1, name: 'Piet Pietersen', birthDate: '1999-11-11', email: 'piet@email.com' },
+    { id: 2, name: 'Jan Jansen', birthDate: '1987-21-09', email: 'jan@email.com' },
+    { id: 3, name: 'Kees Keessen', birthDate: '2002-05-01', email: 'kees@email.com' },
   ];
 
   private membersSubject = new BehaviorSubject<Member[]>(this.members);
