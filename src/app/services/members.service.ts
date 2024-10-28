@@ -28,7 +28,8 @@ export class MemberService {
   }
 
   addMember(member: Member): void {
-    member.id = Date.now();
+    //change to db id when database
+    member.id = this.members.length + 1;
     this.members.push(member);
     this.membersSubject.next(this.members);
     this.membershipMediatorService.setMembers(this.members);
