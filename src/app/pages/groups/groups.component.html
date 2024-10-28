@@ -1,1 +1,37 @@
-<p>groups works!</p>
+<h1>Groepen</h1>
+<table class="groups-table">
+  <thead>
+    <tr>
+      <th>Naam</th>
+      <th>Leden</th>
+      <th>Actions</th>
+    </tr>
+  </thead>
+  <tbody>
+    @for(group of groups; track group){
+    <tr>
+      <td>{{ group.name }}</td>
+      <td>
+        <ul>
+            @for(member of group.members; track member){
+                <li>{{ member.name }}</li>
+            }
+        </ul>
+      </td>
+      <td>
+        <button (click)="onEdit(group)">Edit</button>
+        <button (click)="onDelete(group.id)">Delete</button>
+      </td>
+    </tr>
+    }
+  </tbody>
+</table>
+<button (click)="onAdd()">Add Group</button>
+
+@if(selectedGroup){
+  <app-group-form
+    [group]="selectedGroup"
+    (save)="onSave($event)"
+    (cancel)="onCancel()">
+  </app-group-form>
+}
