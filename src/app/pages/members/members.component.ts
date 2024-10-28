@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { Member } from '../../models/members.model';
+import { Member } from '../../models/member.model';
 import { MemberService } from '../../services/members.service';
 import { MemberFormComponent } from "./member-form/member-form.component";
 
@@ -29,7 +29,7 @@ export class MembersComponent {
   }
 
   onAdd(): void {
-    this.selectedMember = { id: 0, name: '', birthDate: '', email: '' };
+    this.selectedMember = { id: 0, name: '', birthDate: '', email: '', groups: [] };
   }
 
   onSave(member: Member): void {

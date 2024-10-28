@@ -1,5 +1,5 @@
 import { Component, EventEmitter, Input, NgModule, Output } from '@angular/core';
-import { Member } from '../../../models/members.model';
+import { Member } from '../../../models/member.model';
 import { FormsModule, NgModel } from '@angular/forms';
 import { CommonModule } from '@angular/common';
 
@@ -11,7 +11,7 @@ import { CommonModule } from '@angular/common';
   styleUrl: './member-form.component.scss'
 })
 export class MemberFormComponent {
-  @Input() member: Member = { id: 0, name: '', birthDate: '', email: '' };
+  @Input() member: Member = { id: 0, name: '', birthDate: '', email: '', groups: [] };
   @Output() save = new EventEmitter<Member>();
   @Output() cancel = new EventEmitter<void>();
 
